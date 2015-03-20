@@ -142,8 +142,8 @@ public class Hand {
 				temp = hand;
 				Card c = new Card(Suit, Value); // creates a card of the indexed
 												// suit/value
-				temp.CardsInHand.remove(0); // removes the first joker NOTE removing first value each time?
-				temp.CardsInHand.add(0, c); // adds the new card NOTE: see above
+				temp.CardsInHand.remove(0); // removes the first joker
+				temp.CardsInHand.add(0, c); // adds the new card 
 				Collections.sort(temp.CardsInHand, Card.CardRank); // SORTS the
 																	// temp hand
 				explosion.add(temp); // adds temp to arraylist hands
@@ -151,6 +151,7 @@ public class Hand {
 				// are multiple jokers
 			}
 		}
+		explosion.remove(0);
 		return explosion;
 	}
 
